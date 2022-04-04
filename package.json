@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "node":"^12.0.0",
   "dependencies": {
     "body-parser": "^1.20.0",
     "express-handlebars": "^6.0.3",
     "express": "^4.17.3",
     "mongoose": "^6.2.9"
+  },
+  "engines": {
+    "node": "12.x",
+    "npm":"6.9.0"
   },
   "devDependencies": {
     "handlebars": "^4.5.0"
@@ -17,10 +20,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "cd client && npm run build",
     "install-client": "cd client && npm install",
-    "heroku-postbuild": "npm run install-client && npm run build",
+    "start": "node server.js",
+    "heroku-postbuild": "ng build --prod",
     "server": "nodemon server.js",
-    "develop": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix client\"",
-    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix client\""
+    "develop": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix client\""
   },
   "author": "",
   "license": "ISC"
