@@ -6,6 +6,7 @@ const exphbs = require('express-handlebars');
 const bodyparser = require('body-parser');
 const mongoose = require('mongoose');
 const Word = mongoose.model('word');
+const port = process.env.PORT || 5000;
 
 // const wordcontroller = require('./controllers/wordcontroller');
 
