@@ -11,9 +11,10 @@
   },
   "engines": {
     "node": "12.x",
-    "npm":"6.9.0"
+    "npm": "6.9.0"
   },
   "devDependencies": {
+    "graceful-fs": "^4.2.9",
     "handlebars": "^4.5.0"
   },
   "scripts": {
